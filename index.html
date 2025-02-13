@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilentEcho - Crime Investigation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- SIGNUP PAGE -->
+    <div id="signup-container">
+        <h2>Sign Up to SilentEcho</h2>
+        <input type="text" id="signup-username" placeholder="Choose Username">
+        <input type="password" id="signup-password" placeholder="Choose Password">
+        <input type="text" id="secret-code" placeholder="Enter Secret Code">
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <div id="login-container" style="display: none;">
+        <h2>Login to SilentEcho</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p>New user? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>SilentEcho - Dark Crime Investigation</h1>
+        </header>
+
+        <section class="hero">
+            <button onclick="revealLogo()">Reveal Hidden Logo</button>
+            <div class="hidden-logo">
+                <img src="Untitled design (1).png" alt="SilentEcho Logo">
+            </div>
+        </section>
+
+        <section class="map-container">
+            <h2>Crime Investigation Map</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345084745!2d144.95373631550413!3d-37.81627974202178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4526d11111%3A0x5fbb6eae869ea68d!2sCrime%20Scene!5e0!3m2!1sen!2sin!4v1625592457224!5m2!1sen!2sin" 
+                width="80%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <section class="chat-box">
+            <h2>Secret Chat Forum</h2>
+            <div class="messages" id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type your secret message...">
+            <button onclick="sendMessage()">Send</button>
+        </section>
+    </div>
+
+</body>
+</html>
+
